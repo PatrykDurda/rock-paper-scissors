@@ -26,15 +26,15 @@ console.log("The computer choose " + computerSelection);
 
     // DECLARE WINNER
     function playRound(playerSelection, computerSelection) {
-        if (playerSelection.toLowerCase() == "rock" && computerSelection == "scissors" || playerSelection.toLowerCase() == "paper" && computerSelection == "rock" || playerSelection.toLowerCase() == "scissors" && computerSelection == "paper"){
+        if (playerSelection.toLowerCase() === "rock" && computerSelection === "scissors" || playerSelection.toLowerCase() === "paper" && computerSelection === "rock" || playerSelection.toLowerCase() === "scissors" && computerSelection === "paper"){
            playerScore++;
           return win;
         }
-        else if (playerSelection.toLowerCase() == "rock" && computerSelection == "paper" || playerSelection.toLowerCase() == "scissors" && computerSelection == "rock" || playerSelection.toLowerCase() == "paper" && computerSelection == "scissors"){
+        else if (playerSelection.toLowerCase() === "rock" && computerSelection === "paper" || playerSelection.toLowerCase() === "scissors" && computerSelection === "rock" || playerSelection.toLowerCase() === "paper" && computerSelection === "scissors"){
           computerScore++;
           return lose;
         }
-          else if (playerSelection.toLowerCase() == computerSelection){
+          else if (playerSelection.toLowerCase() === computerSelection){
          tieScore++;
           return tie;
         } 
