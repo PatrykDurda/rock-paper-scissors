@@ -49,7 +49,11 @@ function game() {
        
     for (let i = 0; i <4; i++) {
         //UPDATING PLAYER'S INPUT
-        playerSelection = prompt("Let's play rock, paper, scissors!\nText your choice here!");
+        const playerSelection = prompt("Let's play rock, paper, scissors!\nText your choice here!").toLowerCase();
+        if(computerChoice.includes(playerSelection) === false) {
+            alert("Error! You need to input rock, paper or scissors!\nTry again!");
+            i--;
+        }
         console.log ("You choose " +playerSelection.toLowerCase() + "!");
         //UPDATING COMPUTER'S INPUT
         computerChoice = ["rock","paper","scissors"];
